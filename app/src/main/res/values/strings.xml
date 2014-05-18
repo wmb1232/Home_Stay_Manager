@@ -4,5 +4,8 @@
     <string name="app_name">Home_Stay_Manager</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="Username">Username</string>
+    <string name="credentialSubmit">Submit</string>
+    <string name="submit">New Button</string>
 
 </resources>

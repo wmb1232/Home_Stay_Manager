@@ -11,6 +11,28 @@
     <TextView
         android:text="@string/hello_world"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+    <TextView
+        android:text="name: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_name"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:layout_width="300dip"
+        android:layout_height="300dip"
+        android:id="@+id/splash"
+        android:layout_below="@+id/app_name"
+        android:layout_marginTop="2dip"
+        android:scaleType="fitCenter"
+        android:layout_marginBottom="2dip"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        />
+
+
 
 </RelativeLayout>
