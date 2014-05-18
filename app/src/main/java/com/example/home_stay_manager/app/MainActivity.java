@@ -2,16 +2,20 @@ package com.example.home_stay_manager.app;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private Button closeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +23,15 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         TextView nameText = (TextView) findViewById(R.id.app_name);
-        nameText.setTextColor(Color.BLUE);
+        nameText.setTextColor(Color.RED);
+
+        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/arial-black.ttf");
+        nameText.setTypeface(type);
+
 
         ImageView splashImage = (ImageView) findViewById(R.id.splash);
-        splashImage.setImageDrawable(getResources().getDrawable(R.drawable.testing1));
+
+        splashImage.setImageDrawable(getResources().getDrawable(R.drawable.yoyyes));
         splashImage.setOnClickListener(new View.OnClickListener(){
             @Override
         public void onClick(View v){
@@ -31,9 +40,19 @@ public class MainActivity extends ActionBarActivity {
             }
 
         });
+//////////////////////
 
 
 
+
+        final Button button = (Button) findViewById(R.id.log_in);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Intent i = new Intent(MainActivity.this, PhotoActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
 
