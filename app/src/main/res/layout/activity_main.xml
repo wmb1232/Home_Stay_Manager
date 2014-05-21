@@ -6,6 +6,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/unitra"
     tools:context="com.example.home_stay_manager.app.MainActivity">
 
     <TextView
@@ -16,7 +17,7 @@
         android:scaleType="fitCenter"
         android:id="@+id/textView" />
     <TextView
-        android:text="Clikea en la foto para ver otra foto"
+        android:text="Feels just like being home!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitCenter"
@@ -24,29 +25,38 @@
         android:layout_marginTop="20dp"
         />
 
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="170dip"
-        android:id="@+id/splash"
-        android:layout_below="@+id/app_name"
-        android:layout_marginTop="2dip"
-        android:scaleType="fitCenter"
-        android:layout_marginBottom="2dip"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/app_name"
-        />
-
     <Button android:id="@+id/log_in"
         android:layout_width="fill_parent"
         android:layout_height="50dip"
+        android:layout_marginBottom="40dip"
+        android:focusable="true"
+        android:color="#f8f8ff"
         android:layout_alignParentBottom="true"
-        android:text="Log In" />
+        android:textSize="32sp"
+        android:text="Log In"
+        android:background="#0000"
+        />
+
+    <Button android:id="@+id/log_in_facebook"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginBottom="100dip"
+        android:focusable="true"
+        android:color="#f8f8ff"
+        android:layout_alignParentBottom="true"
+        android:textSize="26sp"
+        android:background="#0000"
+        android:text="Register with Facebook" />
 
     <Button android:id="@+id/sign_in"
         android:layout_width="fill_parent"
         android:layout_height="50dip"
-        android:gravity="center"
-        android:layout_centerInParent="true"
+        android:layout_marginBottom="160dip"
+        android:focusable="true"
+        android:color="#f8f8ff"
+        android:textSize="32sp"
+        android:background="#0000"
+        android:layout_alignParentBottom="true"
         android:text="Sign In" />
 
 

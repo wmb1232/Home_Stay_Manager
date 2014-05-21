@@ -18,7 +18,7 @@ public class PhotoActivity extends Activity
         setContentView(R.layout.photo_layout);
 
         ImageView photo = (ImageView) findViewById(R.id.photo);
-        photo.setImageDrawable(getResources().getDrawable(R.drawable.test2));
+        photo.setImageDrawable(getResources().getDrawable(R.drawable.unitra));
     }
 
 }

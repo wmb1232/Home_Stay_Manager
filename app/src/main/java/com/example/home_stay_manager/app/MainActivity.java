@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,11 +17,15 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 
     private Button closeButton;
+    private EditText  username=null;
+    private EditText  password=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        username = (EditText)findViewById(R.id.editText1);
+        password = (EditText)findViewById(R.id.editText2);
 
         TextView nameText = (TextView) findViewById(R.id.app_name);
         nameText.setTextColor(Color.RED);
@@ -29,28 +34,52 @@ public class MainActivity extends ActionBarActivity {
         nameText.setTypeface(type);
 
 
-        ImageView splashImage = (ImageView) findViewById(R.id.splash);
+       // ImageView splashImage = (ImageView) findViewById(R.id.);
 
-        splashImage.setImageDrawable(getResources().getDrawable(R.drawable.yoyyes));
-        splashImage.setOnClickListener(new View.OnClickListener(){
-            @Override
-        public void onClick(View v){
-                Intent i = new Intent(MainActivity.this, PhotoActivity.class);
-                startActivity(i);
-            }
+        //splashImage.setImageDrawable(getResources().getDrawable(R.drawable.yoyyes));
+       // splashImage.setOnClickListener(new View.OnClickListener(){
+          //  @Override
+        //public void onClick(View v){
+          //      Intent i = new Intent(MainActivity.this, PhotoActivity.class);
+            //    startActivity(i);
+         //   }
 
-        });
-//////////////////////
+       // });
 
-
-
-
+        // log in button
         final Button button = (Button) findViewById(R.id.log_in);
+        button.setTypeface(type);
+        button.setTextColor(Color.WHITE);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                Intent i = new Intent(MainActivity.this, PhotoActivity.class);
+                Intent i = new Intent(MainActivity.this, StudentData.class);
                 startActivity(i);
+            }
+        });
+
+        // sign in button
+        final Button Sign_in_button = (Button) findViewById(R.id.sign_in);
+        Sign_in_button.setTypeface(type);
+        Sign_in_button.setTextColor(Color.WHITE);
+        Sign_in_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Perform action on click
+                Intent k = new Intent(MainActivity.this, PhotoActivity.class);
+                startActivity(k);
+            }
+        });
+
+        // Facebook sign in button
+        final Button Sign_in_button_Facebook = (Button) findViewById(R.id.log_in_facebook);
+        Sign_in_button_Facebook.setTextColor(Color.BLUE);
+        Sign_in_button_Facebook.setTypeface(type);
+        Sign_in_button_Facebook.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                // Perform action on click
+                Intent k = new Intent(MainActivity.this, PhotoActivity.class);
+                startActivity(k);
             }
         });
     }
